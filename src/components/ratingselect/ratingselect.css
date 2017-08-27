@@ -1,0 +1,66 @@
+.ratingselect .rating-type {
+  padding: 18px 0;
+  margin: 0 0 0 18px;
+  position: relative;
+  font-size: 0;
+}
+.ratingselect .rating-type:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-top: 1px dotted rgba(7, 17, 27, 0.1);
+  width: 100%;
+  content: '';
+}
+.ratingselect .rating-type .block {
+  display: inline-block;
+  padding: 8px 12px;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: #4d555d;
+  font-size: 12px;
+  line-height: 12px;
+}
+.ratingselect .rating-type .block.active {
+  color: #fff;
+}
+.ratingselect .rating-type .block.all {
+  background: rgba(0, 160, 220, 0.2);
+}
+.ratingselect .rating-type .block.all.active {
+  background: #00a0dc;
+}
+.ratingselect .rating-type .block.negative {
+  background: rgba(77, 85, 93, 0.2);
+}
+.ratingselect .rating-type .block.negative.active {
+  background: #4d555d;
+}
+.ratingselect .rating-type .block.positive {
+  background: rgba(0, 160, 220, 0.2);
+}
+.ratingselect .rating-type .block.positive.active {
+  background: #00a0dc;
+}
+.ratingselect .rating-type .block .count {
+  font-size: 12px;
+}
+.ratingselect .switch {
+  padding: 12px 18px;
+  line-height: 24px;
+  color: #93999f;
+  border-bottom: 1px solid rgba(1, 17, 27, 0.1);
+}
+.ratingselect .switch.on .icon-font {
+  color: #00c850;
+}
+.ratingselect .switch .icon-font {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+  font-size: 24px;
+}
+.ratingselect .switch .text {
+  font-size: 12px;
+}

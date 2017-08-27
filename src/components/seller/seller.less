@@ -1,0 +1,227 @@
+@import "../../common/style/mixin";
+
+//首先seller 绝对定位， 作为滚动容器
+.seller {
+  position: absolute;
+  top: 174px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  background: #f3f5f7;
+  .seller-content {
+    background: #fff;
+    .overview {
+      padding: 18px;
+      position: relative;
+      .title {
+        margin-bottom: 8px;
+        line-height: 14px;
+        color: rgb(7, 17, 27);
+        font-size: 14px;
+      }
+      .desc {
+        padding: 8px 0 18px 0;
+        font-size: 0;
+        .border-1px(solid, rgba(7, 17, 27, 0.1));
+        .star {
+          display: inline-block;
+          vertical-align: top;
+          margin-right: 8px;
+        }
+        .text {
+          display: inline-block;
+          vertical-align: top;
+          line-height: 18px;
+          margin-right: 12px;
+          color: rgb(77, 85, 93);
+          font-size: 10px;
+        }
+      }
+      .remark {
+        display: flex;
+        margin-top: 18px;
+        .block {
+          flex: 1;
+          text-align: center;
+          border-right: 1px solid rgba(7, 17, 27, 0.1);
+          &:last-child {
+            border: none;
+          }
+          .title {
+            margin-bottom: 4px;
+            font-size: 10px;
+            color: rgb(147, 153, 159);
+            line-height: 12px;
+          }
+          .content {
+            font-size: 10px;
+            color: rgb(7, 17, 27);
+            .stress {
+              font-size: 24px;
+              font-weight: 300;
+              color: rgb(7, 17, 27);
+              line-height: 24px;
+            }
+          }
+        }
+      }
+      .favorite {
+        position: absolute;
+        right: 11px;
+        top: 18px;
+        width: 50px;
+        text-align: center;
+        .icon-favorite {
+          display: block;
+          margin-bottom: 6px;
+          line-height: 24px;
+          font-size: 25px;
+          color: #d4d6d9;
+        }
+        .icon-favorite.active {
+          color: red;
+        }
+        .text {
+          line-height: 18px;
+          font-size: 10px;
+          color: rgb(77, 85, 93);
+        }
+      }
+    }
+    .bulletin {
+      padding: 18px 18px 0 18px;
+      .title {
+        margin-bottom: 8px;
+        line-height: 14px;
+        font-size: 14px;
+        font-weight: 700;
+        color: rgb(7, 17, 27);
+      }
+      .content-wrapper {
+        padding: 0 12px 16px 12px;
+        .border-1px(solid, rgba(7, 17, 27, 0.1));
+        .content {
+          color: rgb(240, 20, 20);
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+        }
+      }
+      .support {
+        .support-item {
+          padding: 16px 12px;
+          .border-1px(solid, rgba(7, 17, 27, 0.1));
+          font-size: 0;
+          &:last-child {
+            .border-none();
+          }
+          .icon {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 6px;
+            width: 16px;
+            height: 16px;
+            background-size: 16px 16px;
+            background-repeat: no-repeat;
+            &.decrease {
+              .bg-image('decrease_4');
+            }
+            &.discount {
+              .bg-image('discount_4');
+            }
+            &.guarantee {
+              .bg-image('guarantee_4');
+            }
+            &.invoice {
+              .bg-image('invoice_4');
+            }
+            &.special {
+              .bg-image('special_4');
+            }
+          }
+          .text {
+            display: inline-block;
+            font-size: 12px;
+            line-height: 16px;
+            color: rgb(7, 17, 27);
+          }
+        }
+      }
+    }
+    .pics {
+      padding: 18px;
+      .title {
+        margin-bottom: 8px;
+        line-height: 14px;
+        font-size: 14px;
+        font-weight: 700;
+        color: rgb(7, 17, 27);
+      }
+      .picwrapper {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        .pic-list {
+          font-size: 0;
+          .pic-item {
+            display: inline-block;
+            margin-right: 6px;
+            width: 120px;
+            height: 90px;
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+    .info {
+      padding: 18px 18px 0 18px;
+      .title {
+        padding-bottom: 8px;
+        line-height: 14px;
+        font-size: 14px;
+        font-weight: 700;
+        .border-1px(solid, rgba(7, 17, 27, 0.1));
+        color: rgb(7, 17, 27);
+      }
+      .info-item {
+        //列表垂直居中 用 上下 padding 可防止列表中数字过多造成影响
+        padding: 16px 12px;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 200;
+        color: rgb(7, 17, 27);
+        .border-1px(solid, rgba(7, 17, 27, 0.1));
+        &:last-child {
+          .border-none();
+          margin-bottom: 0;
+        }
+      }
+    }
+    .foot {
+      background: #f3f5f7;
+      height: 50px;
+      line-height: 50px;
+      .title {
+        margin: 0 auto;
+        display: flex;
+        width: 80%;
+        .line {
+          flex: 1;
+          position: relative;
+          top: -24px;
+          border-bottom: 1px solid rgba(216, 220, 218, 0.3);
+        }
+        .text {
+          font-size: 14px;
+          padding: 0 12px;
+          font-weight: 300;
+          color: rgb(140, 140, 140);
+        }
+      }
+    }
+  }
+}

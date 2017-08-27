@@ -1,0 +1,47 @@
+.cartcontrol {
+  font-size: 0;
+  /*.cart-count end*/
+}
+.cartcontrol .cart-decrease {
+  display: inline-block;
+  padding: 6px;
+  transition: all 0.4s linear;
+  transform: translate3D(0, 0, 0);
+  opacity: 1;
+}
+.cartcontrol .cart-decrease .inner {
+  display: inline-block;
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+  color: #00a0dc;
+  transition: all 0.4s linear;
+  transform: rotate(0deg);
+}
+.cartcontrol .cart-decrease.move-enter,
+.cartcontrol .cart-decrease.move-leave-active {
+  transition: all 0.4s linear;
+  opacity: 0;
+  transform: translate3D(24px, 0, 0);
+}
+.cartcontrol .cart-decrease.move-enter .inner,
+.cartcontrol .cart-decrease.move-leave-active .inner {
+  transform: rotate(180deg);
+}
+.cartcontrol .cart-count {
+  display: inline-block;
+  vertical-align: top;
+  width: 16px;
+  padding-top: 6px;
+  line-height: 24px;
+  font-size: 12px;
+  text-align: center;
+  color: #93999f;
+}
+.cartcontrol .cart-add {
+  display: inline-block;
+  padding: 6px;
+  font-size: 22px;
+  line-height: 22px;
+  color: #00a0dc;
+}

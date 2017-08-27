@@ -1,0 +1,211 @@
+.ratings {
+  position: absolute;
+  width: 100%;
+  top: 174px;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  background: #f3f5f7;
+}
+.ratings .ratings-content {
+  background: #fff;
+}
+.ratings .ratings-content .overview {
+  display: flex;
+  padding: 18px 0;
+}
+.ratings .ratings-content .overview .overview-left {
+  flex: 0 0 137px;
+  padding: 6px 0;
+  width: 137px;
+  border-right: 1px solid rgba(7, 17, 27, 0.1);
+  text-align: center;
+}
+@media only screen and (max-width: 320px) {
+  .ratings .ratings-content .overview .overview-left {
+    flex: 0 0 120px;
+    width: 120px;
+  }
+}
+.ratings .ratings-content .overview .overview-left .score {
+  font-size: 28px;
+  color: #ff9900;
+  line-height: 28px;
+  margin-bottom: 6px;
+}
+.ratings .ratings-content .overview .overview-left .title {
+  margin-bottom: 8px;
+  line-height: 12px;
+  font-size: 12px;
+  color: #07111b;
+}
+.ratings .ratings-content .overview .overview-left .rank {
+  font-size: 10px;
+  line-height: 10px;
+  color: #93999f;
+}
+.ratings .ratings-content .overview .overview-right {
+  flex: 1;
+  padding: 6px 0 6px 24px;
+}
+@media only screen and (max-width: 320px) {
+  .ratings .ratings-content .overview .overview-right {
+    padding-left: 6px;
+  }
+}
+.ratings .ratings-content .overview .overview-right .score-wrapper {
+  margin-bottom: 8px;
+  font-size: 0;
+}
+.ratings .ratings-content .overview .overview-right .score-wrapper .title {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 18px;
+  color: #07111b;
+}
+.ratings .ratings-content .overview .overview-right .score-wrapper .star {
+  display: inline-block;
+  margin: 0 12px;
+  vertical-align: top;
+}
+.ratings .ratings-content .overview .overview-right .score-wrapper .score {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 18px;
+  font-size: 12px;
+  color: #ff9900;
+}
+.ratings .ratings-content .overview .overview-right .delivery-wrapper {
+  font-size: 0;
+}
+.ratings .ratings-content .overview .overview-right .delivery-wrapper .title {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 18px;
+  color: #07111b;
+}
+.ratings .ratings-content .overview .overview-right .delivery-wrapper .delivery {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 12px;
+  line-height: 18px;
+  font-size: 12px;
+  color: #93999f;
+}
+.ratings .ratings-content .ratings-wrapper {
+  padding: 0 18px;
+}
+.ratings .ratings-content .ratings-wrapper .rating-item {
+  display: flex;
+  padding: 16px 0;
+  position: relative;
+}
+.ratings .ratings-content .ratings-wrapper .rating-item:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid rgba(7, 17, 27, 0.1);
+  width: 100%;
+  content: '';
+}
+.ratings .ratings-content .ratings-wrapper .rating-item:last-child:after {
+  display: none;
+}
+.ratings .ratings-content .ratings-wrapper .rating-item .avatar {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
+}
+.ratings .ratings-content .ratings-wrapper .rating-item .avatar img {
+  border-radius: 50%;
+}
+.ratings .ratings-content .ratings-wrapper .rating-item .content {
+  position: relative;
+  flex: 1;
+}
+.ratings .ratings-content .ratings-wrapper .rating-item .content .name {
+  margin-bottom: 6px;
+  line-height: 12px;
+  font-weight: 400;
+  font-size: 10px;
+  color: #07111b;
+}
+.ratings .ratings-content .ratings-wrapper .rating-item .content .star-wrapper {
+  margin-bottom: 6px;
+  font-size: 0;
+}
+.ratings .ratings-content .ratings-wrapper .rating-item .content .star-wrapper .star {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 16px;
+}
+.ratings .ratings-content .ratings-wrapper .rating-item .content .star-wrapper .delivery {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 12px;
+  color: #93999f;
+}
+.ratings .ratings-content .ratings-wrapper .rating-item .content .text {
+  margin: 6px 0 6px 0;
+  font-size: 12px;
+  line-height: 18px;
+  color: #07111b;
+}
+.ratings .ratings-content .ratings-wrapper .rating-item .content .recommend {
+  line-height: 16px;
+  font-size: 0;
+}
+.ratings .ratings-content .ratings-wrapper .rating-item .content .recommend .icon-font,
+.ratings .ratings-content .ratings-wrapper .rating-item .content .recommend .item {
+  display: inline-block;
+  margin: 0 8px 4px 0;
+  font-size: 9px;
+  vertical-align: middle;
+}
+.ratings .ratings-content .ratings-wrapper .rating-item .content .recommend .icon-font {
+  color: #00a0dc;
+}
+.ratings .ratings-content .ratings-wrapper .rating-item .content .recommend .item {
+  padding: 0 6px;
+  border: 1px solid rgba(7, 17, 27, 0.1);
+  border-radius: 2px;
+  color: #93999f;
+  background: #fff;
+}
+.ratings .ratings-content .ratings-wrapper .rating-item .content .time {
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 12px;
+  font-size: 10px;
+  font-weight: 400;
+  color: #07111b;
+}
+.ratings .ratings-content .foot {
+  background: #f3f5f7;
+  height: 50px;
+  line-height: 50px;
+}
+.ratings .ratings-content .foot .title {
+  margin: 0 auto;
+  display: flex;
+  width: 80%;
+}
+.ratings .ratings-content .foot .title .line {
+  flex: 1;
+  position: relative;
+  top: -24px;
+  border-bottom: 1px solid rgba(216, 220, 218, 0.3);
+}
+.ratings .ratings-content .foot .title .text {
+  font-size: 14px;
+  padding: 0 12px;
+  font-weight: 300;
+  color: #8c8c8c;
+}
