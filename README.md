@@ -22,3 +22,6 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 #外卖WebApp(demo)
 https://shiduobin.github.io/takeaway/dist/index.html
+
+#扫码预览demo效果
+
