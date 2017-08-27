@@ -20,8 +20,9 @@ npm run build --report
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-#外卖WebApp(demo)
+> *外卖WebApp(demo)
 https://shiduobin.github.io/takeaway/dist/index.html
 
-#扫码预览demo效果
+> *扫码预览demo效果
+![png](https://github.com/shiduobin/upload-photos/blob/master/外卖demo.png)
 
