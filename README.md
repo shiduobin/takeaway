@@ -24,5 +24,8 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 https://shiduobin.github.io/takeaway/dist/index.html
 
 > *扫码预览demo效果
+
+
+
 ![png](https://github.com/shiduobin/upload-photos/blob/master/外卖demo.png)
 
