@@ -7,7 +7,7 @@
           <img :src="food.image" alt="">
           <!-- 返回按钮 -->
           <div class="back" v-on:click="hide">
-            <i class="icon-arrow_lift icon-font"></i>
+            <i class="icon iconfont icon-undo"></i>
           </div>
         </div>
         <!--商品相关信息-->
@@ -59,8 +59,8 @@
                 </div>
                 <div class="time">{{rating.rateTime | formatDate}}</div>
                 <p class="text">
-                  <i class="icon-font"
-                     :class="{'icon-thumb_up':rating.rateType===1,'icon-thumb_down':rating.rateType===-1}"></i>
+                  <i class="iconfont"
+                     :class="{'icon iconfont icon-haoping':rating.rateType===1,'icon iconfont icon-chaping':rating.rateType===-1}"></i>
                   {{rating.text}}
                 </p>
               </li>

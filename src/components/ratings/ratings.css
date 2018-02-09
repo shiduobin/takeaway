@@ -161,14 +161,14 @@
   line-height: 16px;
   font-size: 0;
 }
-.ratings .ratings-content .ratings-wrapper .rating-item .content .recommend .icon-font,
+.ratings .ratings-content .ratings-wrapper .rating-item .content .recommend .iconfont,
 .ratings .ratings-content .ratings-wrapper .rating-item .content .recommend .item {
   display: inline-block;
   margin: 0 8px 4px 0;
   font-size: 9px;
   vertical-align: middle;
 }
-.ratings .ratings-content .ratings-wrapper .rating-item .content .recommend .icon-font {
+.ratings .ratings-content .ratings-wrapper .rating-item .content .recommend .iconfont {
   color: #00a0dc;
 }
 .ratings .ratings-content .ratings-wrapper .rating-item .content .recommend .item {

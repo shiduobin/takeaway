@@ -13,7 +13,7 @@
     </div>
     <!--有内容的评价-->
     <div class="switch" :class="{'on':onlyContent}" v-on:click="toggleContent">
-      <span class="icon-check_circle icon-font"></span>
+      <span class="icon iconfont icon-success_fill"></span>
       <span class="text">只看有内容的评价</span>
     </div>
   </div>

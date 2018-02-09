@@ -53,17 +53,20 @@
     <!--shopcart底部购物车组件-->
     <shopcart ref="shopcart" v-bind:delivery-price="seller.deliveryPrice" v-bind:min-price="seller.minPrice"
               v-bind:select-foods="selectFoods"></shopcart>
+
     <!--food商品详情页组件-->
     <food v-bind:food="seeFoodinfo" v-on:add="addFood" ref="food"></food>
+
   </div>
 </template>
 
 <script type="text/ecmascript-6">
   import data from '../../common/json/data.json';
   import Bscroll from 'better-scroll';
-  import shopcart from '../../components/shopcart/shopcart.vue';
-  import cartcontrol from '../../components/cartcontrol/cartcontrol.vue';
-  import food from '../../components/food/food.vue';
+  import shopcart from '../../components/shopcart/shopcart';
+  import cartcontrol from '../../components/cartcontrol/cartcontrol';
+  import food from '../../components/food/food';
+  import settlement from '../../components/settlement/settlement';
 
   export default {
     props: {
@@ -75,7 +78,8 @@
     components: {
       shopcart: shopcart,
       cartcontrol: cartcontrol,
-      food: food
+      food: food,
+      settlement: settlement
     },
     data() {
       return {

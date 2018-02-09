@@ -83,14 +83,14 @@
   width: 50px;
   text-align: center;
 }
-.seller .seller-content .overview .favorite .icon-favorite {
+.seller .seller-content .overview .favorite .icon-shoucang {
   display: block;
   margin-bottom: 6px;
   line-height: 24px;
   font-size: 25px;
   color: #d4d6d9;
 }
-.seller .seller-content .overview .favorite .icon-favorite.active {
+.seller .seller-content .overview .favorite .icon-shoucang.active {
   color: red;
 }
 .seller .seller-content .overview .favorite .text {

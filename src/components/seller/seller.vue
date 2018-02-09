@@ -31,7 +31,7 @@
         </ul>
         <!--收藏-->
         <div class="favorite" @click="toggleFavorite($event)">
-          <span class="icon-favorite" :class="{'active':favorite}"></span>
+          <span class="icon iconfont icon-shoucang" :class="{'active':favorite}"></span>
           <span class="text">{{favoriteText}}</span>
         </div>
       </div>

@@ -52,7 +52,7 @@
               </div>
               <p class="text">{{rating.text}}</p>
               <div class="recommend" v-show="rating.recommend && rating.recommend.length">
-                <span class="icon-thumb_up icon-font"></span>
+                <span class="icon iconfont icon-haoping"></span>
                 <span class="item" v-for="item in rating.recommend">{{item}}</span>
               </div>
               <div class="time">

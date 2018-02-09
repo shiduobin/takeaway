@@ -37,7 +37,7 @@
   top: 12px;
   left: 12px;
 }
-.food .food-content .image-header .back .icon-font {
+.food .food-content .image-header .back .iconfont {
   display: block;
   padding: 8px;
   font-size: 16px;
@@ -188,16 +188,16 @@
   font-size: 12px;
   color: #07111b;
 }
-.food .food-content .rating .rating-wrapper .rating-item .text .icon-font {
+.food .food-content .rating .rating-wrapper .rating-item .text .iconfont {
   margin-right: 4px;
   line-height: 16px;
   font-size: 12px;
   vertical-align: middle;
 }
-.food .food-content .rating .rating-wrapper .rating-item .text .icon-thumb_up {
+.food .food-content .rating .rating-wrapper .rating-item .text .icon-haoping {
   color: #00a0dc;
 }
-.food .food-content .rating .rating-wrapper .rating-item .text .icon-thumb_down {
+.food .food-content .rating .rating-wrapper .rating-item .text .icon-chaping {
   color: #93999f;
 }
 .food .food-content .rating .rating-wrapper .no-rating {

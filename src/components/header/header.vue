@@ -18,18 +18,18 @@
         </div>
       </div>
       <div v-if="seller.supports" class="support-count" v-on:click="showDetail">
-        <span class="count">{{seller.supports.length}}个</span><span class="icon-font icon-keyboard_arrow_right"></span>
+        <span class="count">{{seller.supports.length}}个</span><span class="icon iconfont icon-jiantouyou"></span>
       </div>
     </div>
     <div class="bulletin-wrapper" v-on:click="showDetail">
       <span class="bulletin-title"></span><span class="bulletin-text">{{seller.bulletin}}</span>
-      <i class="icon-font icon-keyboard_arrow_right"></i>
+      <i class="icon iconfont icon-tishishuoming"></i>
     </div>
     <div class="background">
       <img v-bind:src="seller.avatar" width="100%" height="100%">
     </div>
     <transition name="fade">
-      <div v-show="detailShow" class="detail" transition="fade">
+      <div v-show="detailShow" class="detail">
         <div class="detail-wrapper clearfix">
           <div class="detail-main">
             <h1 class="name">{{seller.name}}</h1>
@@ -58,7 +58,7 @@
           </div>
         </div>
         <div class="detail-close">
-          <i class="icon-close" v-on:click="hideDetail"></i>
+          <i class="icon iconfont icon-guanbi" v-on:click="hideDetail"></i>
         </div>
       </div>
     </transition>

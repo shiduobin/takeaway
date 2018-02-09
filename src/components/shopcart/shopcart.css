@@ -37,12 +37,12 @@
 .shopcart .content .content-left .logo-wrapper .logo.highlight {
   background: #00a0c8;
 }
-.shopcart .content .content-left .logo-wrapper .logo .icon-font {
+.shopcart .content .content-left .logo-wrapper .logo .iconfont {
   line-height: 46px;
   font-size: 26px;
   color: #80858a;
 }
-.shopcart .content .content-left .logo-wrapper .logo .icon-font.highlight {
+.shopcart .content .content-left .logo-wrapper .logo .iconfont.highlight {
   color: #fff;
 }
 .shopcart .content .content-left .logo-wrapper .num {

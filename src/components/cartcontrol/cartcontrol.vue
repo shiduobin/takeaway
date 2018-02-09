@@ -4,7 +4,7 @@
     <transition name="move">
       <!--减少商品-->
       <div class="cart-decrease" v-show="food.count>0" v-on:click.stop.prevent="decreaseCart($event)">
-        <i class="icon-remove_circle_outline inner"></i>
+        <i class="icon iconfont icon-offline_fill inner"></i>
       </div>
     </transition>
     <!--商品数量-->
@@ -13,7 +13,7 @@
     </div>
     <!--增加商品-->
     <div class="cart-add" v-on:click.stop.prevent="addCart($event)">
-      <i class="iconfont icon-add_circle"></i>
+      <i class="icon iconfont icon-addition_fill"></i>
     </div>
   </div>
 </template>

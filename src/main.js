@@ -3,14 +3,18 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
+import MintUI from 'mint-ui';
 import App from './App';
-import goods from './components/goods/goods.vue';
-import ratings from './components/ratings/ratings.vue';
-import seller from './components/seller/seller.vue';
+import goods from './components/goods/goods';
+import ratings from './components/ratings/ratings';
+import seller from './components/seller/seller';
 import './common/style/index.css';
+import 'mint-ui/lib/style.css';
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
+Vue.use(MintUI);
+
 let routes = [
   {
     path: '/',

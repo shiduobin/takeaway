@@ -7,7 +7,7 @@
           <div class="logo-wrapper">
             <!--购物车-->
             <div class="logo" v-bind:class="{'highlight':totalCount>0}">
-              <i class="icon-shopping_cart icon-font" v-bind:class="{'highlight':totalCount>0}"></i>
+              <i class="icon iconfont icon-publishgoods_fill" v-bind:class="{'highlight':totalCount>0}"></i>
             </div>
             <!--数量-->
             <div class="num" v-show="totalCount>0">
@@ -26,7 +26,6 @@
           </div>
         </div>
       </div>
-
       <!--添加购物车动画-->
       <div class="ball-container">
         <div v-for="ball in balls">
@@ -37,7 +36,6 @@
           </transition>
         </div>
       </div>
-
       <!--购物车列表-->
       <transition name="fold">
         <div class="shopcart-list" v-show="listShow">
@@ -65,16 +63,19 @@
     <transition name="fade">
       <div class="list-mask" v-show="listShow" v-on:click="hideList"></div>
     </transition>
+    <settlement ref="settlement"></settlement>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-  import cartcontrol from '../cartcontrol/cartcontrol.vue';
+  import cartcontrol from '../cartcontrol/cartcontrol';
+  import settlement from '../settlement/settlement';
   import Bscroll from 'better-scroll';
 
   export default {
     components: {
-      cartcontrol: cartcontrol
+      cartcontrol: cartcontrol,
+      settlement: settlement
     },
     props: {
       // 配送费
@@ -191,8 +192,10 @@
         if (this.totalPrice < this.minPrice) {
           return;
         } else {
-          let money = this.totalPrice + this.deliveryPrice;
-          window.alert('支付' + money + '元');
+          // let money = this.totalPrice + this.deliveryPrice;
+          // window.alert('支付' + money + '元');
+          // 调用子组件的 food show 方法
+          this.$refs.settlement.show();
         }
       },
       drop: function (el) {
