@@ -8,6 +8,7 @@ import App from './App';
 import goods from './components/goods/goods';
 import ratings from './components/ratings/ratings';
 import seller from './components/seller/seller';
+import welcome from './components/welcome/welcome';
 import './common/style/index.css';
 import 'mint-ui/lib/style.css';
 
@@ -17,7 +18,12 @@ Vue.use(MintUI);
 
 let routes = [
   {
-    path: '/',
+    path: '/welcome',
+    name: 'welcome',
+    component: welcome
+  },
+  {
+    path: '/app',
     name: 'index',
     component: App,
     children: [
@@ -35,5 +41,5 @@ let router = new VueRouter({
 let app = new Vue({
   router: router
 }).$mount('#app');
-router.push('/goods');
+router.push('/welcome');
 export default app;

@@ -66,7 +66,7 @@
   import shopcart from '../../components/shopcart/shopcart';
   import cartcontrol from '../../components/cartcontrol/cartcontrol';
   import food from '../../components/food/food';
-  import settlement from '../../components/settlement/settlement';
+  // import settlement from '../../components/settlement/settlement';
 
   export default {
     props: {
@@ -78,8 +78,8 @@
     components: {
       shopcart: shopcart,
       cartcontrol: cartcontrol,
-      food: food,
-      settlement: settlement
+      food: food
+      // settlement: settlement
     },
     data() {
       return {
