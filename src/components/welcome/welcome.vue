@@ -21,7 +21,7 @@
         entryEl.style.width = advWidth + 'px';
         entryEl.style.height = advHeight + 'px';
         welcomeEl.style.overflowY = 'hidden';
-        // 阻止滑动执行
+        // 阻止滑动执行发给
         welcomeEl.ontouchmove = function (ev) {
           ev.preventDefault();
         };

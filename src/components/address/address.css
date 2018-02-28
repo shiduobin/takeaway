@@ -1,0 +1,125 @@
+.choseAddress {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 50;
+  width: 100%;
+  background: #fff;
+}
+.choseAddress .chose-title {
+  height: 80px;
+  line-height: 80px;
+  padding: 0 10px;
+  background: #008aff;
+}
+.choseAddress .chose-title .back {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.choseAddress .chose-title .back .iconfont {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+}
+.choseAddress .chose-title span {
+  display: inline-block;
+  color: #fff;
+  font-size: 20px;
+  margin-left: 50px;
+}
+.choseAddress .address1-wrapper {
+  padding: 20px 10px;
+}
+.choseAddress .address1-wrapper ul li span {
+  display: inline-block;
+}
+.choseAddress .address1-wrapper ul li p:nth-child(1) {
+  margin-bottom: 6px;
+}
+.choseAddress .address1-wrapper ul li p:nth-child(1) .address1 {
+  font-size: 18px;
+  font-weight: bold;
+  height: 22px;
+  line-height: 22px;
+}
+.choseAddress .address1-wrapper ul li p:nth-child(1) .tag {
+  font-size: 16px;
+  color: #008aff;
+  border-radius: 2px;
+  border: 1px solid #008aff;
+  padding: 2px 5px;
+  margin-left: 8px;
+}
+.choseAddress .address1-wrapper ul li p:nth-child(2) {
+  margin-bottom: 8px;
+}
+.choseAddress .address1-wrapper ul li p:nth-child(2) .address2 {
+  font-size: 16px;
+  font-weight: 700;
+  height: 22px;
+  line-height: 22px;
+}
+.choseAddress .address1-wrapper ul li p:nth-child(3) {
+  margin-bottom: 18px;
+}
+.choseAddress .address1-wrapper ul li p:nth-child(3) .user,
+.choseAddress .address1-wrapper ul li p:nth-child(3) .sex {
+  font-size: 16px;
+  color: #999;
+}
+.choseAddress .address1-wrapper ul li p:nth-child(3) .phone {
+  font-size: 16px;
+  color: #999;
+  vertical-align: top;
+}
+.choseAddress .address2-wrapper {
+  padding: 20px 10px;
+}
+.choseAddress .address2-wrapper .address2-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.choseAddress .address2-wrapper ul li span {
+  display: inline-block;
+}
+.choseAddress .address2-wrapper ul li p:nth-child(1) {
+  margin-bottom: 6px;
+}
+.choseAddress .address2-wrapper ul li p:nth-child(1) .address1 {
+  font-size: 18px;
+  font-weight: bold;
+  height: 22px;
+  line-height: 22px;
+}
+.choseAddress .address2-wrapper ul li p:nth-child(1) .tag {
+  font-size: 16px;
+  color: #008aff;
+  border-radius: 2px;
+  border: 1px solid #008aff;
+  padding: 2px 5px;
+  margin-left: 8px;
+}
+.choseAddress .address2-wrapper ul li p:nth-child(2) {
+  margin-bottom: 8px;
+}
+.choseAddress .address2-wrapper ul li p:nth-child(2) .address2 {
+  font-size: 16px;
+  font-weight: 700;
+  height: 22px;
+  line-height: 22px;
+}
+.choseAddress .address2-wrapper ul li p:nth-child(3) {
+  margin-bottom: 18px;
+}
+.choseAddress .address2-wrapper ul li p:nth-child(3) .user,
+.choseAddress .address2-wrapper ul li p:nth-child(3) .sex {
+  font-size: 16px;
+  color: #999;
+}
+.choseAddress .address2-wrapper ul li p:nth-child(3) .phone {
+  font-size: 16px;
+  color: #999;
+  vertical-align: top;
+}

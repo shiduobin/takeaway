@@ -151,17 +151,16 @@
   color: #00a0dc;
 }
 .shopcart .shopcart-list .list-content {
-  padding: 0 18px;
   max-height: 217px;
   overflow: hidden;
   background: #fff;
 }
-.shopcart .shopcart-list .list-content .food {
-  padding: 12px 0;
+.shopcart .shopcart-list .list-content ul .food {
+  padding: 12px 18px;
   box-sizing: border-box;
   position: relative;
 }
-.shopcart .shopcart-list .list-content .food:after {
+.shopcart .shopcart-list .list-content ul .food:after {
   display: block;
   position: absolute;
   left: 0;
@@ -170,12 +169,12 @@
   width: 100%;
   content: '';
 }
-.shopcart .shopcart-list .list-content .food .name {
+.shopcart .shopcart-list .list-content ul .food .name {
   line-height: 24px;
   font-size: 14px;
   color: #07111b;
 }
-.shopcart .shopcart-list .list-content .food .price {
+.shopcart .shopcart-list .list-content ul .food .price {
   position: absolute;
   right: 90px;
   bottom: 12px;
@@ -184,7 +183,7 @@
   font-weight: 700;
   color: #f01414;
 }
-.shopcart .shopcart-list .list-content .food .cartcontrol-wrapper {
+.shopcart .shopcart-list .list-content ul .food .cartcontrol-wrapper {
   position: absolute;
   right: 0;
   bottom: 6px;

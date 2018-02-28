@@ -2,52 +2,232 @@
   position: fixed;
   left: 0;
   top: 0;
-  bottom: 0px;
   z-index: 60;
   width: 100%;
-  background: #f3f5f7;
+  height: 100%;
+  background: #008aff;
+  background: -moz-linear-gradient(top, 0 #008aff, #ffffff);
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#008aff), to(#ffffff));
+  background: -o-linear-gradient(top, 0 #008aff, #ffffff);
 }
-.settlement .back {
-  position: absolute;
-  top: 38px;
-  left: 25px;
+.settlement.move-enter-active,
+.settlement.move-leave-active {
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s linear;
 }
-.settlement .back .iconfont {
+.settlement.move-enter,
+.settlement.move-leave-active {
+  transform: translate3d(100%, 0, 0);
+}
+.settlement .settlement-wrapper .address {
+  width: auto;
+  height: 135px;
+  padding: 0 20px;
+}
+.settlement .settlement-wrapper .address .back {
+  padding-top: 10px;
+  margin-bottom: 15px;
+}
+.settlement .settlement-wrapper .address .back .iconfont {
   display: block;
-  padding: 8px;
   font-size: 16px;
-  text-align: center;
+  margin: 8px 0 10px 0;
   color: #fff;
-  background: rgba(77, 77, 77, 0.3);
-  border-radius: 50%;
+  font-weight: bold;
 }
-.settlement .address {
-  height: 150px;
-  background: #00a0fe;
-  text-align: center;
-  border: 1px solid red;
+.settlement .settlement-wrapper .address .add-title {
+  color: #fff;
+  opacity: 0.8;
 }
-.settlement .address .add-title {
+.settlement .settlement-wrapper .address .add-second {
   display: inline-block;
-  text-align: center;
-  padding-top: 35px;
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: bold;
   color: #fff;
+  font-size: 22px;
+  margin-top: 10px;
 }
-.settlement .address .iconfont {
-  font-weight: 600;
-  font-size: 20px;
+.settlement .settlement-wrapper .address .iconfont {
+  font-size: 22px;
   margin-left: 8px;
   color: #fff;
 }
-.settlement .address .add-first,
-.settlement .address .add-second {
-  margin-top: 18px;
-  text-align: center;
+.settlement .settlement-wrapper .address .user {
+  margin: 10px 0;
   color: #fff;
-  font-weight: 600;
 }
-.settlement .address .add-second {
-  margin-top: 6px;
+.settlement .settlement-wrapper .time {
+  margin: 10px 10px;
+  padding: 20px 15px;
+  background: #fff;
+  border-radius: 2px;
+}
+.settlement .settlement-wrapper .time .time-box {
+  margin-bottom: 10px;
+}
+.settlement .settlement-wrapper .time .time-box .time_1 {
+  float: left;
+  font-size: 18px;
+  font-weight: bold;
+}
+.settlement .settlement-wrapper .time .time-box .time_2 {
+  float: right;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2396ff;
+}
+.settlement .settlement-wrapper .time .time-box .time_2 .iconfont {
+  font-size: 18px;
+  color: #999;
+}
+.settlement .settlement-wrapper .time .time-box:after {
+  display: block;
+  clear: both;
+  height: 0;
+  content: "";
+  visibility: hidden;
+  overflow: hidden;
+}
+.settlement .settlement-wrapper .time span {
+  display: inline-block;
+  text-align: center;
+  margin-top: 8px;
+  margin-right: 5px;
+  width: 70px;
+  height: 20px;
+  line-height: 20px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+.settlement .settlement-wrapper .time span:nth-child(2) {
+  color: #fff;
+  background: #2396ff;
+  vertical-align: top;
+}
+.settlement .settlement-wrapper .time span:nth-child(3) {
+  color: #2396ff;
+  border: 1px solid #2396ff;
+}
+.settlement .settlement-wrapper .time span:nth-child(4) {
+  color: #999;
+  border: 1px solid #999;
+}
+.settlement .settlement-wrapper .time .line {
+  height: 0;
+  border-top: 1px solid #e9eef5;
+  margin: 20px 0;
+}
+.settlement .settlement-wrapper .time .pay-box .pay_1 {
+  float: left;
+  font-size: 18px;
+  font-weight: bold;
+}
+.settlement .settlement-wrapper .time .pay-box .pay_2 {
+  float: right;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2396ff;
+}
+.settlement .settlement-wrapper .time .pay-box .pay_2 .iconfont {
+  font-size: 18px;
+  color: #999;
+}
+.settlement .settlement-wrapper .time .pay-box:after {
+  display: block;
+  clear: both;
+  height: 0;
+  content: "";
+  visibility: hidden;
+  overflow: hidden;
+}
+.settlement .settlement-wrapper .foods-box {
+  margin: 10px 10px;
+  padding: 20px 15px;
+  background: #fff;
+  border-radius: 2px;
+}
+.settlement .settlement-wrapper .foods-box .seller-name {
+  font-size: 22px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid #c9cdd2;
+}
+.settlement .settlement-wrapper .foods-box ul:after {
+  display: block;
+  clear: both;
+  height: 0;
+  content: "";
+  visibility: hidden;
+  overflow: hidden;
+}
+.settlement .settlement-wrapper .foods-box ul li {
+  display: flex;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #e9eef5;
+}
+.settlement .settlement-wrapper .foods-box ul li span {
+  flex: 1;
+}
+.settlement .settlement-wrapper .foods-box ul li span:nth-child(2) {
+  text-align: right;
+}
+.settlement .settlement-wrapper .foods-box ul li span:nth-child(3) {
+  text-align: right;
+}
+.settlement .settlement-wrapper .foods-box ul li:last-child {
+  border-bottom: none;
+}
+.settlement .pay-yes {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 48px;
+}
+.settlement .pay-yes .content {
+  display: flex;
+  font-size: 0px;
+  background: rgba(20, 29, 39, 0.8);
+}
+.settlement .pay-yes .content .content-left {
+  flex: 1;
+  height: 48px;
+}
+.settlement .pay-yes .content .content-left .price {
+  vertical-align: top;
+  padding: 0 20px 0 20px;
+  margin: 14px 0;
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  box-sizing: border-box;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+.settlement .pay-yes .content .content-left .desc {
+  display: inline-block;
+  padding: 0 20px 0 20px;
+  margin: 14px 0;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  color: #999;
+  box-sizing: border-box;
+}
+.settlement .pay-yes .content .content-right {
+  flex: 0 0 105px;
+  width: 105px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  background: #00b34c;
+}
+.settlement .pay-yes .content .content-right .pay {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  display: inline-block;
 }

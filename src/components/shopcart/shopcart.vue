@@ -3,7 +3,6 @@
     <div class="shopcart">
       <div class="content" v-on:click="toggleList($event)">
         <div class="content-left">
-
           <div class="logo-wrapper">
             <!--购物车-->
             <div class="logo" v-bind:class="{'highlight':totalCount>0}">
@@ -63,19 +62,16 @@
     <transition name="fade">
       <div class="list-mask" v-show="listShow" v-on:click="hideList"></div>
     </transition>
-  <!--  <settlement ref="settlement"></settlement>-->
   </div>
 </template>
 
 <script type="text/ecmascript-6">
   import cartcontrol from '../cartcontrol/cartcontrol';
-  // import settlement from '../settlement/settlement';
   import Bscroll from 'better-scroll';
 
   export default {
     components: {
       cartcontrol: cartcontrol
-      // settlement: settlement
     },
     props: {
       // 配送费
@@ -88,7 +84,7 @@
         type: Number,
         default: 0
       },
-      // goods组件,传递选择的商品数组
+      // 传递选择的商品数组
       selectFoods: {
         type: Array,
         default: function () {
@@ -101,7 +97,7 @@
         }
       }
     },
-    data: function () {
+    data() {
       return {
         // 创建5个小球用于动画
         balls: [{show: false}, {show: false}, {show: false}, {show: false}, {show: false}],
@@ -196,6 +192,12 @@
           // window.alert('支付' + money + '元');
           // 调用子组件的 food show 方法
           // this.$refs.settlement.show();
+          this.$router.push({
+            path: '/settlement',
+            query: {
+              selectFoods: this.selectFoods
+            }
+          });
         }
       },
       drop: function (el) {

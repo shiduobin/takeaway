@@ -1408,5 +1408,75 @@
       "avatar": "http://static.galileo.xiaojukeji.com/static/tms/default_header.png",
       "recommend": []
     }
+  ],
+  "address": [
+    {
+      "address1": "中国电子大厦",
+      "tag": "公司",
+      "address2": "丹棱街3 B座8层",
+      "user": "张超",
+      "sex": 1,
+      "phone": "13988888888",
+      "exceed": 1
+    },
+    {
+      "address1": "北京科技大学天津学院",
+      "tag": "学校",
+      "address2": "5斋",
+      "user": "李萌萌",
+      "sex": 0,
+      "phone": "15677777777",
+      "exceed": 0
+    },
+    {
+      "address1": "联社小区",
+      "tag": "家",
+      "address2": "王岘东路 三单元",
+      "user": "张超",
+      "sex": 1,
+      "phone": "13866666666",
+      "exceed": 1
+    },
+    {
+      "address1": "北京科技大学天津学院",
+      "tag": "学校",
+      "address2": "玑瑛公社",
+      "user": "张超",
+      "sex": 1,
+      "phone": "13599999999",
+      "exceed": 0
+    },
+    {
+      "address1": "北京科技大学天津学院",
+      "tag": "学校",
+      "address2": "3教学楼",
+      "user": "张超",
+      "sex": 1,
+      "phone": "13599999999",
+      "exceed": 0
+    },
+    {
+      "address1": "中国电子大厦",
+      "tag": "公司",
+      "address2": "丹棱街3 B座9层",
+      "user": "张超",
+      "sex": 1,
+      "phone": "13988888888",
+      "exceed": 1
+    }
+  ],
+  "pay": [
+    {
+      "name": "支付宝",
+      "class": "icon-zhifubaozhifu"
+    },
+    {
+      "name": "微信",
+      "class": "icon-weixinzhifu"
+    },
+    {
+      "name": "银行卡支付",
+      "class": "icon-bangdingshezhiyinxingqiabangding"
+    }
   ]
 }

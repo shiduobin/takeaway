@@ -9,6 +9,7 @@ import goods from './components/goods/goods';
 import ratings from './components/ratings/ratings';
 import seller from './components/seller/seller';
 import welcome from './components/welcome/welcome';
+import settlement from './components/settlement/settlement';
 import './common/style/index.css';
 import 'mint-ui/lib/style.css';
 
@@ -21,6 +22,11 @@ let routes = [
     path: '/welcome',
     name: 'welcome',
     component: welcome
+  },
+  {
+    path: '/settlement',
+    name: 'settlement',
+    component: settlement
   },
   {
     path: '/app',
