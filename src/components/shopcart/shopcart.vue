@@ -62,16 +62,19 @@
     <transition name="fade">
       <div class="list-mask" v-show="listShow" v-on:click="hideList"></div>
     </transition>
+    <settlement v-bind:food="selectFoods" v-bind:totalPrice="totalPrice" ref="settlement"></settlement>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
   import cartcontrol from '../cartcontrol/cartcontrol';
+  import settlement from '../settlement/settlement';
   import Bscroll from 'better-scroll';
 
   export default {
     components: {
-      cartcontrol: cartcontrol
+      cartcontrol,
+      settlement
     },
     props: {
       // 配送费
@@ -188,16 +191,7 @@
         if (this.totalPrice < this.minPrice) {
           return;
         } else {
-          // let money = this.totalPrice + this.deliveryPrice;
-          // window.alert('支付' + money + '元');
-          // 调用子组件的 food show 方法
-          // this.$refs.settlement.show();
-          this.$router.push({
-            path: '/settlement',
-            query: {
-              selectFoods: this.selectFoods
-            }
-          });
+          this.$refs.settlement.show();
         }
       },
       drop: function (el) {

@@ -7,12 +7,11 @@
   z-index: 50;
 }
 .pay-choose .pay-list {
-  transition: all 1s linear;
+  transition: all .2s linear;
 }
 .pay-choose .pay-list.move-enter-active,
 .pay-choose .pay-list.move-leave-active {
   transform: translate3d(0, 0, 0);
-  transition: all .5s linear;
 }
 .pay-choose .pay-list.move-enter,
 .pay-choose .pay-list.move-leave-active {
@@ -85,7 +84,7 @@
 }
 .list-mask.fade-enter-active,
 .list-mask.fade-leave-active {
-  transition: opacity .3s;
+  transition: opacity .1s;
 }
 .list-mask.fade-enter,
 .list-mask.fade-leave-to {

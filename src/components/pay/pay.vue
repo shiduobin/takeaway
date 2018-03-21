@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pay">
     <div class="pay-choose">
       <transition name="move">
         <div class="pay-list" v-if="showFlag">

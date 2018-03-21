@@ -1,0 +1,113 @@
+// different scenarios button
+.button-variant(@color; @background; @border) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+  &:focus,
+  &.focus {
+    color: @color;
+    background-color: darken(@background, 10%);
+    border-color: darken(@border, 25%);
+  }
+  &:hover {
+    color: @color;
+    background-color: darken(@background, 10%);
+    border-color: darken(@border, 12%);
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: @color;
+    background-color: darken(@background, 10%);
+    border-color: darken(@border, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: @color;
+      background-color: darken(@background, 17%);
+      border-color: darken(@border, 25%);
+    }
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: @background;
+      border-color: @border;
+    }
+  }
+
+  .badge {
+    color: @background;
+    background-color: @color;
+  }
+}
+
+// Button sizes
+.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
+  padding: @padding-vertical @padding-horizontal;
+  font-size: @font-size;
+  line-height: @line-height;
+  border-radius: @border-radius;
+}
+
+// base button
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+}
+
+.btn-default {
+  .button-variant(#333, #fff, #ccc);
+}
+
+.btn-primary {
+  .button-variant(#fff, #1890ff, #057cff);
+}
+
+.btn-success {
+  .button-variant(#fff, #5cb85c, #4cae4c);
+}
+
+.btn-error {
+  .button-variant(#fff, #d9534f, #d43f3a)
+}
+
+.btn-info {
+  .button-variant(#fff, #5bc0de, #46b8da);
+}
+
+.btn-warning {
+  .button-variant(#fff, #f0ad4e, #eea236);
+}
+
+.btn-link {
+  font-weight: 400;
+  .button-variant(#337ab7, transparent, transparent);
+}

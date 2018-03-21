@@ -420,351 +420,131 @@ fieldset[disabled] .btn-link.focus {
   color: transparent;
   background-color: #337ab7;
 }
-.choseAddress {
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 50;
-  width: 100%;
-  background: #fff;
-}
-.choseAddress.move-enter-active,
-.choseAddress.move-leave-active {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  transition: all .3s linear;
-}
-.choseAddress.move-enter,
-.choseAddress.move-leave-active {
-  -webkit-transform: translate3d(100%, 0, 0);
-  -moz-transform: translate3d(100%, 0, 0);
-  -ms-transform: translate3d(100%, 0, 0);
-  transform: translate3d(100%, 0, 0);
-}
-.choseAddress .chose-title {
-  height: 55px;
-  width: 100%;
-  line-height: 55px;
-  position: fixed;
-  background: #008aff;
-  z-index: 55;
-}
-.choseAddress .chose-title .back {
-  display: inline-block;
-  margin-left: 10px;
-}
-.choseAddress .chose-title .back .iconfont {
-  display: inline-block;
-  font-size: 16px;
-  color: #fff;
-  font-weight: bold;
-}
-.choseAddress .chose-title span {
-  display: inline-block;
-  color: #fff;
-  font-size: 16px;
-}
-.choseAddress .chose-title span:nth-child(2) {
-  margin-left: 25px;
-}
-.choseAddress .chose-title span:nth-child(3) {
-  float: right;
-  margin-right: 10px;
-}
-.choseAddress .addressWrapper {
-  position: fixed;
-  left: 0;
-  top: 55px;
-  bottom: 0;
-  z-index: 50;
-  width: 100%;
-  background: #f3f5f7;
-}
-.choseAddress .addressWrapper .address1-wrapper {
-  background: #fff;
-  padding: 20px 10px;
-}
-.choseAddress .addressWrapper .address1-wrapper ul li span {
-  display: inline-block;
-}
-.choseAddress .addressWrapper .address1-wrapper ul li p:nth-child(1) {
-  margin-bottom: 6px;
-}
-.choseAddress .addressWrapper .address1-wrapper ul li p:nth-child(1) .address1 {
-  font-size: 18px;
-  font-weight: bold;
-  height: 22px;
-  line-height: 22px;
-}
-.choseAddress .addressWrapper .address1-wrapper ul li p:nth-child(1) .tag {
-  font-size: 16px;
-  color: #008aff;
-  border-radius: 2px;
-  border: 1px solid #008aff;
-  padding: 2px 5px;
-  margin-left: 8px;
-}
-.choseAddress .addressWrapper .address1-wrapper ul li p:nth-child(2) {
-  margin-bottom: 8px;
-}
-.choseAddress .addressWrapper .address1-wrapper ul li p:nth-child(2) .address2 {
-  font-size: 16px;
-  height: 22px;
-  line-height: 22px;
-}
-.choseAddress .addressWrapper .address1-wrapper ul li p:nth-child(3) {
-  margin-bottom: 18px;
-}
-.choseAddress .addressWrapper .address1-wrapper ul li p:nth-child(3) .user,
-.choseAddress .addressWrapper .address1-wrapper ul li p:nth-child(3) .sex {
-  font-size: 16px;
-  color: #999;
-}
-.choseAddress .addressWrapper .address1-wrapper ul li p:nth-child(3) .phone {
-  font-size: 16px;
-  color: #999;
-  vertical-align: top;
-}
-.choseAddress .addressWrapper .address2-wrapper {
-  padding: 20px 10px;
-  background: #fff;
-}
-.choseAddress .addressWrapper .address2-wrapper .address2-title {
-  font-size: 17px;
-  font-weight: bold;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #e5e5e5;
-}
-.choseAddress .addressWrapper .address2-wrapper ul li span {
-  display: inline-block;
-}
-.choseAddress .addressWrapper .address2-wrapper ul li p:nth-child(1) {
-  margin-bottom: 6px;
-}
-.choseAddress .addressWrapper .address2-wrapper ul li p:nth-child(1) .address1 {
-  font-size: 18px;
-  font-weight: bold;
-  height: 22px;
-  line-height: 22px;
-}
-.choseAddress .addressWrapper .address2-wrapper ul li p:nth-child(1) .tag {
-  font-size: 16px;
-  color: #008aff;
-  border-radius: 2px;
-  border: 1px solid #008aff;
-  padding: 2px 5px;
-  margin-left: 8px;
-}
-.choseAddress .addressWrapper .address2-wrapper ul li p:nth-child(2) {
-  margin-bottom: 8px;
-}
-.choseAddress .addressWrapper .address2-wrapper ul li p:nth-child(2) .address2 {
-  font-size: 16px;
-  height: 22px;
-  line-height: 22px;
-}
-.choseAddress .addressWrapper .address2-wrapper ul li p:nth-child(3) {
-  margin-bottom: 18px;
-}
-.choseAddress .addressWrapper .address2-wrapper ul li p:nth-child(3) .user,
-.choseAddress .addressWrapper .address2-wrapper ul li p:nth-child(3) .sex {
-  font-size: 16px;
-  color: #999;
-}
-.choseAddress .addressWrapper .address2-wrapper ul li p:nth-child(3) .phone {
-  font-size: 16px;
-  color: #999;
-  vertical-align: top;
-}
-.newAddress {
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 50;
-  width: 100%;
-  background: #F6F6F6;
-}
-.newAddress.move-enter-active,
-.newAddress.move-leave-active {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  transition: all .3s linear;
-}
-.newAddress.move-enter,
-.newAddress.move-leave-active {
-  -webkit-transform: translate3d(100%, 0, 0);
-  -moz-transform: translate3d(100%, 0, 0);
-  -ms-transform: translate3d(100%, 0, 0);
-  transform: translate3d(100%, 0, 0);
-}
-.newAddress .newAddress-title {
-  height: 55px;
-  line-height: 55px;
-  padding: 0 10px;
-  background: #008aff;
-}
-.newAddress .newAddress-title .back {
-  display: inline-block;
-  margin-bottom: 15px;
-}
-.newAddress .newAddress-title .back .iconfont {
-  display: inline-block;
-  font-size: 16px;
-  color: #fff;
-  font-weight: bold;
-}
-.newAddress .newAddress-title span {
-  display: inline-block;
-  color: #fff;
-  font-size: 16px;
-}
-.newAddress .newAddress-title span:nth-child(2) {
-  margin-left: 25px;
-}
-.newAddress .newAddress-content {
-  background: #fff;
-}
-.newAddress .newAddress-content ul {
-  padding-left: 10px;
-  text-align: initial;
-}
-.newAddress .newAddress-content ul li {
-  min-height: 45px;
-  line-height: 45px;
-  border-bottom: 1px solid #F6F6F6;
-}
-.newAddress .newAddress-content ul li label {
-  width: 30%;
-  float: left;
-  display: inline-block;
-  margin-right: -5px;
-}
-.newAddress .newAddress-content ul li label.label-address {
-  height: 70px;
-  line-height: 70px;
-}
-.newAddress .newAddress-content ul li .username,
-.newAddress .newAddress-content ul li .phone,
-.newAddress .newAddress-content ul li .house {
-  width: 70%;
-  height: 30px;
-  line-height: 30px;
-  caret-color: #5dc0ff;
-  outline: none;
-}
-.newAddress .newAddress-content ul li .username {
-  border-bottom: 1px solid #F6F6F6;
-}
-.newAddress .newAddress-content ul li .sex {
-  display: inline-block;
-  border: 1px solid #f6f6f6;
-  width: 65px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  border-radius: 3px;
-}
-.newAddress .newAddress-content ul li .address-placeholder {
-  display: inline-block;
-  color: #757575;
-}
-.newAddress .newAddress-content ul li .name,
-.newAddress .newAddress-content ul li .address {
-  height: 30px;
-  line-height: 30px;
-}
-.newAddress .newAddress-content ul li .name {
-  font-size: 14px;
-  margin-top: 5px;
-}
-.newAddress .newAddress-content ul li .address {
-  font-size: 12px;
-  color: #8c8c8c;
-}
-.newAddress .newAddress-content ul li .icon-jiantouyou {
-  float: right;
-  margin-right: 5%;
-  color: rgba(117, 117, 117, 0.5);
-}
-.newAddress .newAddress-content ul li .tag {
-  display: inline-block;
-  border: 1px solid #f6f6f6;
-  width: 65px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  border-radius: 3px;
-  margin-right: 8px;
-}
-.newAddress .newAddress-content ul li .act {
-  display: inline-block;
-  color: #5dc0ff;
-  border: 1px solid #5dc0ff;
-  width: 65px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  border-radius: 3px;
-  margin-right: 8px;
-}
-.newAddress .newAddress-content ul li ul {
-  margin-left: 26%;
-}
-.newAddress .newAddress-content ul li ul:after {
-  display: block;
-  content: "";
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-.newAddress .newAddress-content ul li ul li {
-  border: none;
-  float: left;
-  margin-right: 20px;
-}
-.newAddress .newAddress-content ul li ul li .iconfont {
-  font-size: 30px;
-}
-.newAddress .newAddress-content ul li ul li .active {
-  color: #008aff;
-}
-.btn-box {
-  text-align: center;
-  margin-top: 10px;
-}
-.btn-box .save {
-  width: 95%;
-  height: 45px;
-  border-radius: 0px;
-}
-.mint-indicator-wrapper {
-  top: 50%;
-  left: 50%;
-  position: fixed;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  border-radius: 5px;
-  background: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  box-sizing: border-box;
-  text-align: center;
-  z-index: 70;
-}
-.mint-indicator-mask {
-  top: 0;
-  left: 0;
+.position {
   position: fixed;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  background: transparent;
+  left: 0;
+  top: 0;
+  bottom: 0;
   z-index: 60;
+  background: #fff;
+}
+.position.move-enter-active,
+.position.move-leave-active {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  transition: all .3s linear;
+}
+.position.move-enter,
+.position.move-leave-active {
+  -webkit-transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
+.position .here {
+  padding: 0 10px;
+}
+.position .icon-a {
+  background: #fff;
+  height: 35px;
+  width: 35px;
+  display: inline-block;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+}
+.position .icon-a .icon-101 {
+  font-size: 28px;
+}
+.position .icon-a:link {
+  color: #333;
+}
+.position .icon-a:hover,
+.position .icon-a:visited {
+  color: #00a0ef;
+}
+.position .amap-info-close {
+  background: none;
+}
+.position .pos-title {
+  width: 100%;
+  height: 55px;
+  line-height: 55px;
+  background: #008aff;
+  color: #fff;
+}
+.position .pos-title .icon-fanhui {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.position .pos-title p {
+  font-size: 16px;
+  display: inline-block;
+  margin-left: 20px;
+}
+.position .pos-title .icon-sousuo {
+  float: right;
+  margin-right: 10px;
+  font-size: 20px;
+}
+.position #container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.position .input-box {
+  position: absolute;
+  padding-left: 42px;
+  bottom: 65px;
+  left: 50%;
+  margin-left: -48%;
+  width: 85%;
+  height: 82px;
+  background: #fff;
+  box-shadow: 0px 3px 3px #cccbcb;
+}
+.position .input-box span {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 24px;
+  color: #00a0ef;
+}
+.position .input-box p {
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 1px solid #e5e5e5;
+}
+.position .input-box input {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+}
+.position .input-box input:focus {
+  outline: none;
+  border: none;
+}
+.position .btn-queding {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -48%;
+  width: 96%;
+  height: 45px;
+  line-height: 45px;
+  border: none;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
 }

@@ -6,10 +6,9 @@
   height: auto;
   z-index: 50;
   .pay-list {
-    transition: all 1s linear;
+    transition: all .2s linear;
     &.move-enter-active, &.move-leave-active {
       transform: translate3d(0, 0, 0);
-      transition: all .5s linear;
     }
     &.move-enter, &.move-leave-active {
       transform: translate3d(0, 100%, 0);
@@ -87,7 +86,7 @@
   -webkit-backdrop-filter: blur(5px);
   background: rgba(7, 17, 27, 0.6);
   &.fade-enter-active, &.fade-leave-active {
-    transition: opacity .3s;
+    transition: opacity .1s;
   }
   &.fade-enter, &.fade-leave-to {
     opacity: 0;

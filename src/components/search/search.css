@@ -1,0 +1,113 @@
+.search {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 60;
+  background: #fff;
+}
+.search.move-enter-active,
+.search.move-leave-active {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  transition: all .3s linear;
+}
+.search.move-enter,
+.search.move-leave-active {
+  -webkit-transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
+.search .ipt-box {
+  position: fixed;
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: 36px;
+  margin-bottom: 8px;
+  z-index: 70;
+  box-shadow: 0px 1px 4px #d5d2d2;
+}
+.search .ipt-box .icon-sousuo {
+  position: absolute;
+  top: 10px;
+  left: 17px;
+}
+.search .ipt-box .search-ipt {
+  height: 36px;
+  width: 65%;
+  line-height: 36px;
+  outline: none;
+  padding-left: 13%;
+  caret-color: #008aff;
+  background: #efefef;
+}
+.search .ipt-box .cancel {
+  display: inline-block;
+  height: 36px;
+  float: right;
+  width: 22%;
+  text-align: center;
+  line-height: 36px;
+  margin-bottom: 8px;
+  background: #fff;
+}
+.search .addressWraper {
+  position: fixed;
+  left: 0;
+  top: 55px;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+}
+.search .addressWraper .address_content {
+  width: 100%;
+}
+.search .addressWraper .address_content ul li label {
+  display: inline-block;
+  float: left;
+  width: 13%;
+  text-align: center;
+  min-height: 66px;
+  line-height: 66px;
+}
+.search .addressWraper .address_content ul li label .circle {
+  width: 6px;
+  height: 5px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  border: 3px solid #d9d9d9;
+}
+.search .addressWraper .address_content ul li label .icon-dingwei {
+  color: #008aff;
+}
+.search .addressWraper .address_content ul li .address-box {
+  width: 87%;
+  min-height: 50px;
+  padding: 8px 0;
+  display: inline-block;
+  border-bottom: 1px solid #efefef;
+}
+.search .addressWraper .address_content ul li .name {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+.search .addressWraper .address_content ul li .address {
+  width: 95%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  color: #8c8c8c;
+}
+.search .addressWraper .address_content ul li:last-child .address-box {
+  border: none;
+}
