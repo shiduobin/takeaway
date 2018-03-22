@@ -15,6 +15,7 @@ import positon from './components/position/positon';
 import address from './components/address/address';
 import newAddress from './components/address/newAddress';
 import search from './components/search/search';
+import order from './components/order/order';
 import './common/style/index.css';
 import 'mint-ui/lib/style.css';
 import 'vue2-animate/dist/vue2-animate.min.css';
@@ -67,10 +68,16 @@ let routes = [
     path: '/newAddress',
     name: 'newAddress',
     component: newAddress
-  }, {
+  },
+  {
     path: '/search',
     name: 'search',
     component: search
+  },
+  {
+    path: '/order',
+    name: 'order',
+    component: order
   }
 ];
 let router = new VueRouter({

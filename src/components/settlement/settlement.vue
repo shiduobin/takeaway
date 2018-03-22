@@ -22,7 +22,6 @@
             <p class="add-second">{{streetString}}</p>
             <i class="icon iconfont icon-jiantouyou"></i>
           </div>
-          <!-- <p class="user">联系人：张三 18888888888</p>-->
         </div>
         <div class="time">
           <div class="time-box">
@@ -41,7 +40,7 @@
         <div class="foods-box">
           <p class="seller-name">{{seller.name}}</p>
           <ul>
-            <li v-for="food in food">
+            <li v-for="(food, index) in food">
               <span>{{food.name}}</span>
               <span>×{{food.count}}</span>
               <span>￥{{food.price * food.count}}</span>
@@ -56,12 +55,13 @@
             <div class="desc">另需配送费￥{{seller.deliveryPrice}}元</div>
           </div>
           <div class="content-right">
-            <div class="pay">确认支付</div>
+            <div class="pay" @click="pay">确认支付</div>
           </div>
         </div>
       </div>
       <site ref="address" @item="getAddress"></site>
       <payChoose @choose="choose" ref="choosepay"></payChoose>
+      <order ref="order" v-bind:food="food" v-bind:totalPrice="totalPrice" v-bind:selectAddress="selectAddress"></order>
     </div>
   </transition>
 </template>
@@ -72,6 +72,8 @@
   import shopcart from '../../components/shopcart/shopcart';
   import site from '../../components/address/address';
   import payChoose from '../../components/pay/pay';
+  import order from '../../components/order/order';
+  import {Toast, Indicator} from 'mint-ui';
 
   export default {
     props: {
@@ -96,7 +98,8 @@
     components: {
       shopcart: shopcart,
       site: site,
-      payChoose: payChoose
+      payChoose: payChoose,
+      order: order
     },
     methods: {
       show() {
@@ -134,11 +137,29 @@
       },
       choosePay() {
         this.$refs.choosepay.show();
+      },
+      pay() {
+        if (this.selectAddress === '') {
+          Toast({
+            message: '请选择收货地址',
+            position: 'middle',
+            duration: 1000
+          });
+        } else {
+          Indicator.open({
+            text: '支付中',
+            spinnerType: 'triple-bounce'
+          });
+          setTimeout(() => {
+            Indicator.close();
+            this.$refs.order.show();
+          }, 2000);
+        }
       }
     },
     mounted() {
       this.seller = sellerData.seller;
-      this.getDate(35);
+      this.getDate(38);
     }
   };
 </script>

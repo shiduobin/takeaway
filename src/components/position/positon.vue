@@ -31,12 +31,11 @@
   export default {
     data() {
       return {
-        username: '',
-        password: '',
-        email: '',
         searchData: '',
         name: '定位中...',
         address: '',
+        lng: '',
+        lat: '',
         positionFlag: false, // 定位状态
         showFlag: false
       };
@@ -60,7 +59,9 @@
           this.showFlag = false;
           let data = {
             name: this.name,
-            address: this.address
+            address: this.address,
+            lng: this.lng,
+            lat: this.lat
           };
           this.$emit('position', data);
         }
@@ -86,7 +87,7 @@
             this.geoCoder(data);
           });
           AMap.event.addListener(geolocation, 'error', (data) => {
-            console.log(data.result);
+            console.log(data);
           });
         });
       },
@@ -100,6 +101,8 @@
           });
           // 经纬度转地址
           Geocoder.getAddress([data.position.getLng(), data.position.getLat()], (status, result) => {
+            this.lng = data.position.getLng();
+            this.lat = data.position.getLat();
             if (status === 'complete' && result.info === 'OK') {
               let _post = result.regeocode.formattedAddress;
               this.placeSearch(_post);
@@ -111,7 +114,7 @@
       // 定位后查询当前地址
       placeSearch(data) {
         let PlaceSearch = new AMap.PlaceSearch({
-          pageSize: 10,
+          pageSize: 1,
           pageIndex: 1,
           city: '010' // 城市
         });
@@ -119,6 +122,8 @@
           if (status === 'complete' && result.info === 'OK') {
             this.name = result.poiList.pois[0].name;
             this.address = result.poiList.pois[0].address;
+            this.lng = JSON.stringify(result.poiList.pois[0].location.lng);
+            this.lat = JSON.stringify(result.poiList.pois[0].location.lat);
             this.positionFlag = true; // 定位成功
             document.getElementById('addIpt').readOnly = false;
           }
@@ -129,8 +134,9 @@
       toSearch() {
         this.$refs.sea.show();
       },
+
+      // 选择地址后重新定位
       itemSearch(data) {
-        console.log(data);
         this.placeSearch(data);
       }
     }

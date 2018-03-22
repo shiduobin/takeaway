@@ -505,7 +505,7 @@ fieldset[disabled] .btn-link.focus {
   border-radius: 2px;
   border: 1px solid #008aff;
   padding: 2px 5px;
-  margin-left: 8px;
+  margin-top: 6px;
 }
 .choseAddress .addressWrapper .address1-wrapper ul li p:nth-child(2) {
   margin-bottom: 8px;
@@ -557,7 +557,7 @@ fieldset[disabled] .btn-link.focus {
   border-radius: 2px;
   border: 1px solid #008aff;
   padding: 2px 5px;
-  margin-left: 8px;
+  margin-top: 6px;
 }
 .choseAddress .addressWrapper .address2-wrapper ul li p:nth-child(2) {
   margin-bottom: 8px;
@@ -683,6 +683,10 @@ fieldset[disabled] .btn-link.focus {
 .newAddress .newAddress-content ul li .name {
   font-size: 14px;
   margin-top: 5px;
+  width: 85%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .newAddress .newAddress-content ul li .address {
   font-size: 12px;
@@ -690,7 +694,6 @@ fieldset[disabled] .btn-link.focus {
 }
 .newAddress .newAddress-content ul li .icon-jiantouyou {
   float: right;
-  margin-right: 5%;
   color: rgba(117, 117, 117, 0.5);
 }
 .newAddress .newAddress-content ul li .tag {

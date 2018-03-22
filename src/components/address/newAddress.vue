@@ -30,15 +30,15 @@
             </li>
             <li>
               <label class="label-address">地址</label>
-              <div style="width: 70%;display: inline-block;line-height: 70px;" v-if="!name">
+              <div @click="toPosition" style="width: 70%;display: inline-block;line-height: 70px;" v-if="!name">
                 <p class="address-placeholder">请选择收货地址</p>
-                <i class="icon iconfont icon-jiantouyou" @click="toPosition"></i>
+                <i class="icon iconfont icon-jiantouyou"></i>
               </div>
-              <div style="width: 70%;display: inline-block;position:relative;" v-else>
+              <div @click="toPosition" style="width: 70%;display: inline-block;position:relative;" v-else>
                 <p class="name">{{name}}</p>
                 <p class="address">{{address}}</p>
-                <i class="icon iconfont icon-jiantouyou" @click="toPosition"
-                   style="position: absolute;top: 0px;right: 10px;"></i>
+                <i class="icon iconfont icon-jiantouyou"
+                   style="position: absolute;top: -3px;right: 15px;"></i>
               </div>
             </li>
             <li>
@@ -77,6 +77,8 @@
         sex: 1,
         name: '',
         address: '',
+        lng: '',
+        lat: '',
         tag: '',
         house: '',
         nowIndex: 5,
@@ -107,6 +109,8 @@
       chosePosition(data) {
         this.name = data.name;
         this.address = data.address;
+        this.lng = data.lng;
+        this.lat = data.lat;
       },
       checkAddress() {
         var reg = /^1[0-9]{10}$/;
@@ -115,6 +119,8 @@
         let house = this.$refs.house.value;
         let name = this.name;
         let address = this.address;
+        let lng = this.lng;
+        let lat = this.lat;
         let sex = this.sex;
         let tag = this.tag;
         if (username === '') {
@@ -160,6 +166,8 @@
         this.$http.post('/api/addAddress', {
           name: name,
           address: address,
+          lng: lng,
+          lat: lat,
           tag: tag,
           username: username,
           sex: sex,

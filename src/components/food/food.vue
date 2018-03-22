@@ -7,7 +7,7 @@
           <img :src="food.image" alt="">
           <!-- 返回按钮 -->
           <div class="back" v-on:click="hide">
-            <i class="icon iconfont icon-undo"></i>
+            <i class="icon iconfont icon-fanhui"></i>
           </div>
         </div>
         <!--商品相关信息-->

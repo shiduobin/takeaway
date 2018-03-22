@@ -18,7 +18,7 @@
                   <li v-for="item in address2" v-if="item.within"
                       v-on:click.stop.prevent.once="selAddress(item,$event)">
                     <p>
-                      <span class="address1">{{item.name}}</span>
+                      <span class="address1">{{item.name}}</span><br/>
                       <span class="tag" v-if="item.tag">{{item.tag}}</span>
                     </p>
                     <p>
@@ -39,7 +39,7 @@
                 <ul style="opacity: 0.5">
                   <li v-for="item in address2" v-if="!item.within" @click="warning">
                     <p>
-                      <span class="address1">{{item.name}}</span>
+                      <span class="address1">{{item.name}}</span><br/>
                       <span class="tag" v-if="item.tag">{{item.tag}}</span>
                     </p>
                     <p>
@@ -118,7 +118,7 @@
         // 定位获取当前位置
         map.plugin('AMap.Geolocation', () => {
           let geolocation = new AMap.Geolocation({
-            enableHighAccuracy: true
+            enableHighAccuracy: true //  是否使用高精度定位，默认:true
           });
           map.addControl(geolocation);
           geolocation.getCurrentPosition();
@@ -128,47 +128,53 @@
             this.getAddress();
           });
           AMap.event.addListener(geolocation, 'error', (data) => {
-            console.log(data.result);
-          });
-        });
-      },
-      // 获取之前添加的地址
-      getAddress() {
-        this.$http.get('/api/selAddress').then((response) => {
-          console.log('查询数据库地址：', response.data);
-          this.address1 = response.data;
-          response.data.forEach((val) => {
-            this.geoCoder(val.name);
-          });
-        });
-      },
-      // 将地址转换成经纬度
-      geoCoder(name) {
-        AMap.service(['AMap.Geocoder'], () => {
-          let geoCoder = new AMap.Geocoder({
-            city: '010', // 城市，默认：'全国'
-            radius: 1000 // 范围，默认：500
-          });
-          // 地理编码,返回地理编码结果
-          geoCoder.getLocation(name, (status, result) => {
-            if (status === 'complete' && result.info === 'OK') {
-              let geocode = result.geocodes;
-              let geoCoderArr = [];
-              geocode.forEach((val) => {
-                geoCoderArr.push(val.location.getLng());
-                geoCoderArr.push(val.location.getLat());
-                this.getDistance(geoCoderArr, name);
-              });
-            }
+            console.log(data);
           });
         });
       },
 
+      // 获取之前添加的地址
+      getAddress() {
+        this.$http.get('/api/selAddress').then((response) => {
+          if (response.data.length > 0) {
+            this.address1 = response.data;
+            response.data.forEach((val) => {
+              // this.geoCoder(val.name);
+              this.getDistance(val.name, val.lng, val.lat);
+            });
+          } else {
+            Indicator.close();
+          }
+        });
+      },
+
+      // 将保存的地址转换成经纬度
+      // geoCoder(name) {
+      //   AMap.service(['AMap.Geocoder'], () => {
+      //     let geoCoder = new AMap.Geocoder({
+      //       city: '010', // 城市，默认：'全国'
+      //       radius: 1000 // 范围，默认：500
+      //     });
+      //     // 地理编码,返回地理编码结果
+      //     geoCoder.getLocation(name, (status, result) => {
+      //       if (status === 'complete' && result.info === 'OK') {
+      //         let geocode = result.geocodes;
+      //         let geoCoderArr = [];
+      //         geocode.forEach((val) => {
+      //           geoCoderArr.push(val.location.getLng());
+      //           geoCoderArr.push(val.location.getLat());
+      //           this.getDistance(geoCoderArr, name);
+      //         });
+      //       }
+      //     });
+      //   });
+      // },
+
       // 计算当前定位地址与保存地址之间的距离
-      getDistance(data, name) {
+      getDistance(name, lng, lat) {
         this.num++;
-        let lnglat1 = new AMap.LngLat(this.lng, this.lat);
-        let lnglat2 = new AMap.LngLat(data[0], data[1]);
+        let lnglat1 = new AMap.LngLat(this.lng, this.lat); // 当前定位地址
+        let lnglat2 = new AMap.LngLat(lng, lat); // 保存的地址
         if (Math.round(lnglat1.distance(lnglat2)) < 5000) {
           this.address1.forEach((v) => {
             if (v.name === name) {

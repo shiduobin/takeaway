@@ -39,7 +39,7 @@ exports.addAddress = (req, res) => {
   sql = _sql.address.add;
   let params = req.body;
   console.log('params:', params.name, params.address, params.tag, params.username, params.sex, params.phone, params.house);
-  conn.query(sql, [params.name, params.address, params.tag, params.username, params.sex, params.phone, params.house], (err, result) => {
+  conn.query(sql, [params.name, params.address, params.lng, params.lat, params.tag, params.username, params.sex, params.phone, params.house], (err, result) => {
     if (err) {
       console.log(err);
     }

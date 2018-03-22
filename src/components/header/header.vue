@@ -9,9 +9,9 @@
           <span class="brand"></span>
           <span class="name">{{seller.name}}</span>
         </div>
-        <span class="description">
+        <div class="description">
           {{seller.description}}·约{{seller.deliveryTime}}分钟送达
-        </span>
+        </div>
         <div v-if="seller.supports" class="support">
           <span class="icon" v-bind:class="classMap[seller.supports[0].type]"></span>
           <span class="text">{{seller.supports[0].description}}</span>

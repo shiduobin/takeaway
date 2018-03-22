@@ -5,7 +5,7 @@ let sql = {
   },
   address: {
     sel: 'select * from address',
-    add: 'insert into address(name, address, tag, username,sex,phone,house) values (?,?,?,?,?,?,?)'
+    add: 'insert into address(name,address,lng,lat,tag,username,sex,phone,house) values (?,?,?,?,?,?,?,?,?)'
   }
 };
 
